@@ -1,0 +1,121 @@
+.time-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 由浮层容器控制高度，这里占满 */
+  padding: 8rpx 20rpx 12rpx;
+}
+/* 浮层标题居中 */
+.at-float-layout__title {
+  text-align: center;
+}
+.sheet-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16rpx;
+  padding: 8rpx 0 12rpx;
+}
+.header-item {
+  text-align: center;
+  color: #334155;
+  font-weight: 600;
+}
+.sheet-body {
+  display: flex;
+  gap: 16rpx;
+  flex: 1;
+  overflow: hidden; /* 仅内部列滚动 */
+}
+.pane {
+  flex: 1;
+  background: #fff;
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+}
+.left-pane {
+  max-width: 220rpx;
+}
+.day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  padding: 8rpx 12rpx 16rpx;
+}
+.day-item {
+  padding: 12rpx 14rpx;
+  border-radius: 8rpx;
+  background: #f3f6fb;
+  color: #334155;
+}
+.day-item.active {
+  background: #ffedd5;
+  color: #9a3412;
+  font-weight: 600;
+}
+.segment-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  padding: 8rpx 12rpx;
+}
+.pane-content {
+  flex: 1;
+  overflow-y: auto; /* 仅日期/时间区域滚动 */
+}
+.segment-chip {
+  padding: 8rpx 12rpx;
+  border-radius: 22rpx;
+  background: #f1f5f9;
+  color: #475569;
+}
+.segment-chip.active {
+  background: #fde68a;
+  color: #7c2d12;
+}
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  padding: 8rpx 12rpx 16rpx;
+}
+.time-list.disabled {
+  opacity: 0.6;
+}
+.time-item {
+  padding: 10rpx 16rpx;
+  border-radius: 8rpx;
+  background: #f8fafc;
+  color: #1f2937;
+}
+.time-item.active {
+  background: #fb923c;
+  color: #fff;
+}
+.sheet-footer {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: stretch;
+  gap: 16rpx;
+  padding: 12rpx 2rpx 0;
+}
+.full-btn {
+  width: 100%;
+  border-radius: 12rpx; /* 小圆角长方形 */
+}
+.preview-text {
+  color: #0f172a;
+}
+
+/* 仅主体滚动：禁用浮层内容滚动，让内部列各自滚动 */
+.ts-float .at-float-layout__container {
+  height: 70vh; /* 固定弹层总体高度 */
+  display: flex;
+  flex-direction: column;
+}
+.ts-float .at-float-layout__header {
+  flex-shrink: 0;
+}
+.ts-float .at-float-layout__content {
+  flex: 1;
+  overflow: hidden !important;
+}

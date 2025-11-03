@@ -1,0 +1,17 @@
+.coop-page { min-height: 100vh; padding: 24rpx; background: #fff; color: #111827; }
+.coop-header { background: #f7f9fc; border: 1rpx solid #e6ecf5; border-radius: 20rpx; padding: 24rpx; margin-bottom: 20rpx; }
+.title { font-size: 1.125rem; font-weight: 800; letter-spacing: 2rpx; }
+.subtitle { margin-top: 8rpx; font-size: 0.875rem; color: #5b6b82; }
+
+.coop-list { display: flex; flex-direction: column; gap: 12rpx; }
+.coop-item { display: flex; align-items: center; justify-content: space-between; border: 1rpx solid #eef2f7; border-radius: 12rpx; padding: 12rpx; }
+.left { display: flex; flex-direction: column; gap: 6rpx; }
+.driver { font-weight: 700; color: #111827; }
+.phone { font-size: 0.85rem; color: #374151; }
+.vehicle-type { font-size: 0.85rem; color: #374151; }
+.vehicle-brand { font-size: 0.85rem; color: #6b7280; }
+.right { display: flex; flex-direction: column; align-items: flex-end; gap: 6rpx; }
+.count { font-size: 0.85rem; color: #374151; font-weight: 600; }
+.last { font-size: 0.8rem; color: #6b7280; }
+.empty { color: #6b7280; font-size: 0.85rem; text-align: center; padding: 12rpx 0; }
+.loading { margin-top: 12rpx; color: #667085; }

@@ -1,0 +1,97 @@
+/* 价格弹窗样式（组件级） */
+.priceMask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 999;
+}
+.priceMask.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.priceModal {
+  position: fixed;
+  left: 50%;
+  bottom: -20%;
+  transform: translateX(-50%);
+  width: 92%;
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 20rpx 40rpx rgba(0, 0, 0, 0.18);
+  padding: 24rpx 20rpx 20rpx;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 220ms ease;
+}
+.priceModal.show {
+  bottom: 40rpx;
+  opacity: 1;
+}
+.priceTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+}
+.priceOptions {
+  margin-top: 16rpx;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16rpx;
+}
+.priceOption {
+  position: relative;
+  background: #f7f9fc;
+  border: 1rpx solid #e6ecf5;
+  border-radius: 20rpx;
+  padding: 20rpx 16rpx;
+  text-align: center;
+}
+.priceOption .planName {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #0f3d7a;
+}
+.priceOption .amount {
+  margin-top: 6rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+.priceOption .desc {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #5b6b82;
+}
+.priceOption.monthly .badge,
+.priceOption.annual .badge {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  background: #ffb300;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 6rpx 10rpx;
+  border-radius: 999rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.12);
+}
+.priceOption.annual .badge {
+  background: #00c853; /* 推荐 */
+}
+.priceCancel {
+  margin-top: 12rpx;
+  width: 100%;
+  background: #ffffff;
+  border: 1rpx solid #e6ecf5;
+  border-radius: 999rpx;
+  text-align: center;
+  padding: 16rpx 0;
+  color: #30445e;
+}
+.btnHover {
+  background: #f0f4f8;
+}

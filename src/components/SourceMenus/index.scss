@@ -1,0 +1,170 @@
+/* 位置：显示在左侧一级菜单右边 - 微信小程序适配版本 */
+.source-menus {
+  position: absolute;
+  top: 72rpx; /* 与左侧栏首个按钮对齐 72px → 144rpx */
+  left: 200rpx; /* 放在左侧栏右侧 150px → 300rpx */
+  z-index: 30;
+}
+
+.primary-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12rpx; /* 12px → 24rpx */
+}
+
+.primary-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx; /* 88px → 176rpx */
+  height: 88rpx; /* 88px → 176rpx */
+  border-radius: 16rpx; /* 16px → 32rpx */
+  background: #fff;
+  box-shadow: 0 12rpx 36rpx rgba(0, 0, 0, 0.08); /* 6px 18px → 12rpx 36rpx */
+}
+
+.primary-icon {
+  width: 36rpx; /* 36px → 72rpx */
+  height: 36rpx; /* 36px → 72rpx */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8rpx; /* 8px → 16rpx */
+}
+
+.primary-text {
+  margin-top: 12rpx; /* 6px → 12rpx */
+  font-size: 0.875rem; /* 14px → 0.875rem */
+  color: #333;
+}
+
+/* 竖排卡片式二级菜单（参考福建图片样式） */
+.submenu-card {
+  border-radius: 18rpx; /* 18px → 36rpx */
+  background: #fff;
+  box-shadow: 0 16rpx 48rpx rgba(0, 0, 0, 0.15); /* 8px 24px → 16rpx 48rpx */
+  overflow: hidden;
+}
+.submenu-card.vehicle {
+  width: 60%;
+}
+
+.submenu-header {
+  height: 80rpx; /* 80px → 160rpx */
+  padding: 0 32rpx; /* 16px → 32rpx */
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(180deg, #ff8f62 0%, #ff6b4a 100%);
+  text-align: center;
+}
+
+.submenu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+// 车源菜单：网格布局，每行3个
+.submenu-list.vehicle-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .submenu-item {
+    width: calc(50% - 32rpx); /* 16px → 32rpx */
+    margin: 16rpx 16rpx; /* 8px → 16rpx */
+    min-height: 120rpx; /* 120px → 240rpx */
+  }
+
+  .submenu-icon {
+    width: 60rpx; /* 60px → 120rpx */
+    height: 60rpx; /* 60px → 120rpx */
+    margin-bottom: 12rpx; /* 6px → 12rpx */
+  }
+
+  .submenu-text {
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+// 货源菜单：保持原有的单列布局
+.submenu-list.cargo-column {
+  display: flex;
+  flex-direction: column;
+
+  .submenu-item {
+    margin: 8rpx 12rpx; /* 8px 12px → 16rpx 24rpx */
+    padding: 16rpx 12rpx; /* 16px 12px → 32rpx 24rpx */
+    min-height: 100rpx; /* 100px → 200rpx */
+  }
+
+  .submenu-icon {
+    width: 80rpx; /* 80px → 160rpx */
+    height: 80rpx; /* 80px → 160rpx */
+  }
+
+  .submenu-text {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+.submenu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12rpx; /* 12px → 24rpx */
+  background: #f8f9fa;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.submenu-item:hover {
+  background: #e9ecef;
+  transform: translateY(-2rpx); /* -1px → -2rpx */
+}
+
+.submenu-item.selected {
+  background: linear-gradient(135deg, #ff8f62 0%, #ff6b4a 100%);
+  color: white;
+  box-shadow: 0 8rpx 24rpx rgba(255, 107, 74, 0.3); /* 4px 12px → 8rpx 24rpx */
+}
+
+.submenu-item.selected .submenu-text {
+  color: white;
+  font-weight: 600;
+}
+
+.submenu-item:active {
+  transform: translateY(0);
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 2px 6px → 4rpx 12rpx */
+}
+
+.submenu-item:last-child {
+  border-bottom: none;
+}
+
+.submenu-icon {
+  width: 80rpx; /* 80px → 160rpx */
+  height: 80rpx; /* 80px → 160rpx */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8rpx; /* 8px → 16rpx */
+  margin-bottom: 8rpx; /* 8px → 16rpx */
+  font-size: 1rem;
+}
+
+.submenu-text {
+  flex: 1;
+  color: #333;
+  font-size: 0.8rem;
+}
