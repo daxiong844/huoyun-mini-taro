@@ -1,48 +1,57 @@
-/* 页面容器：深色渐变背景，打造酷炫风格 */
+/* 页面容器：清新蓝绿渐变背景，打造高端大气风格 */
 .shipping-page {
   min-height: 100vh;
   padding: 24rpx;
-  background: #ffffff;
+  background: linear-gradient(180deg, #f0fdf4 0%, #eff6ff 100%);
   color: #1a1a1a;
 }
 
 /* 顶部横幅 */
 .shipping-hero {
-  background: #f7f9fc;
-  border: 1rpx solid #e6ecf5;
-  border-radius: 20rpx;
-  padding: 24rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.95) 0%, rgba(239, 246, 255, 0.95) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
+  border-radius: 24rpx;
+  padding: 28rpx;
   color: #1a1a1a;
   margin-bottom: 20rpx;
+  box-shadow: 0 12rpx 36rpx rgba(16, 185, 129, 0.15), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20rpx);
 }
 .hero-title {
-  font-size: 1.125rem; /* rem 适配字体可访问性 */
+  font-size: 1.125rem;
   font-weight: 800;
   letter-spacing: 2rpx;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-subtitle {
   margin-top: 8rpx;
   font-size: 0.875rem;
-  color: #5b6b82;
+  color: #047857;
+  letter-spacing: 0.5rpx;
 }
 
 /* 表单卡片：玻璃态卡片增强层次感 */
 .form-card {
-  background: #ffffff;
-  border-radius: 20rpx;
-  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.08);
-  border: 1rpx solid #e6ecf5;
-  padding: 12rpx 12rpx 24rpx;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24rpx;
+  box-shadow: 0 16rpx 48rpx rgba(16, 185, 129, 0.2), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.6);
+  border: 2rpx solid rgba(16, 185, 129, 0.25);
+  padding: 16rpx 16rpx 28rpx;
   margin-top: 8rpx;
+  backdrop-filter: blur(24rpx);
 }
 
 /* 分组容器样式 */
 .form-group {
   margin-top: 16rpx;
-  padding: 12rpx 8rpx;
-  border-radius: 16rpx;
-  // background: #f7f9fc;
-  border: 1rpx solid #e6ecf5;
+  padding: 16rpx 12rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.5) 0%, rgba(239, 246, 255, 0.5) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.1);
 }
 
 .group-header {
@@ -54,8 +63,11 @@
 
 .group-title {
   font-size: 0.95rem;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 1rpx;
 }
 
@@ -65,9 +77,10 @@
   padding: 8rpx 14rpx;
   border-radius: 999rpx;
   font-size: 24rpx;
-  color: #0f3d7a;
-  background: #e6f3ff;
-  border: 1rpx solid #cfe6ff;
+  color: #047857;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.8) 0%, rgba(239, 246, 255, 0.8) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4rpx 12rpx rgba(16, 185, 129, 0.15);
 }
 
 /* 预览列表 */
@@ -140,14 +153,15 @@
   padding: 0 16rpx;
 }
 
-/* 适配 taro-ui 按钮的酷炫样式 */
+/* 适配 taro-ui 按钮的高端蓝绿渐变样式 */
 .at-button--primary {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
-  box-shadow: 0 12rpx 28rpx rgba(79, 172, 254, 0.28);
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%) !important;
+  box-shadow: 0 12rpx 32rpx rgba(16, 185, 129, 0.4), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.3) !important;
+  border: 2rpx solid rgba(255, 255, 255, 0.6) !important;
 }
 .at-button--primary:active {
   transform: translateY(2rpx);
-  box-shadow: 0 8rpx 18rpx rgba(79, 172, 254, 0.22);
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.35), inset 0 2rpx 6rpx rgba(255, 255, 255, 0.25) !important;
 }
 
 /* taro-ui 输入框颜色适配暗色背景 */
@@ -169,8 +183,9 @@
   color: #30445e;
 }
 .at-segmented-control .at-segmented__item--active {
-  background: #e6f3ff;
-  color: #0f3d7a;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  color: #ffffff;
+  box-shadow: 0 4rpx 12rpx rgba(16, 185, 129, 0.3);
 }
 
 /* 列表项颜色优化 */
@@ -218,8 +233,9 @@
   margin-right: 10rpx;
 }
 .radio-circle.checked {
-  background: #d97706; /* 橙色填充，接近附件图 */
-  border-color: #d97706;
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+  border-color: #10b981;
+  box-shadow: 0 4rpx 12rpx rgba(16, 185, 129, 0.3), inset 0 2rpx 6rpx rgba(255, 255, 255, 0.4);
 }
 .radio-check {
   color: #fff;
@@ -359,10 +375,12 @@
 
 /* —— AI 推荐价样式 —— */
 .ai-quote {
-  background: #f7f9fc;
-  border-radius: 12rpx;
-  padding: 20rpx;
-  border: 1rpx solid #e6ecf5;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(239, 246, 255, 0.9) 100%);
+  border-radius: 16rpx;
+  padding: 24rpx;
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8rpx 24rpx rgba(16, 185, 129, 0.15), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20rpx);
 }
 .ai-row {
   display: flex;
@@ -370,11 +388,15 @@
   font-size: 30rpx;
 }
 .ai-label {
-  color: #5b6b82;
+  color: #047857;
+  font-weight: 600;
 }
 .ai-value {
-  color: #e54d42; /* 红色强调 */
-  font-weight: 700;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
   margin-left: 8rpx;
 }
 .ai-unit {

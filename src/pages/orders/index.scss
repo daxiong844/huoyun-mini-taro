@@ -1,33 +1,43 @@
 .orders-page {
   min-height: 100vh;
   padding: 24rpx;
-  background: #ffffff;
+  background: linear-gradient(180deg, #f0fdf4 0%, #eff6ff 100%);
   color: #1a1a1a;
 }
 
 .orders-hero {
-  background: #f7f9fc;
-  border: 1rpx solid #e6ecf5;
-  border-radius: 20rpx;
-  padding: 24rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.95) 0%, rgba(239, 246, 255, 0.95) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
+  border-radius: 24rpx;
+  padding: 28rpx;
   margin-bottom: 20rpx;
+  box-shadow: 0 12rpx 36rpx rgba(16, 185, 129, 0.15), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20rpx);
 }
 .hero-title {
   font-size: 1.125rem;
   font-weight: 800;
   letter-spacing: 2rpx;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-subtitle {
   margin-left: 16rpx;
   margin-top: 8rpx;
   font-size: 0.875rem;
-  color: #5b6b82;
+  color: #047857;
+  letter-spacing: 0.5rpx;
 }
 
 .filters {
-  border: 1rpx solid #e6ecf5;
-  border-radius: 16rpx;
-  padding: 12rpx 8rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.5) 0%, rgba(239, 246, 255, 0.5) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.2);
+  border-radius: 20rpx;
+  padding: 16rpx 12rpx;
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.1);
+  backdrop-filter: blur(16rpx);
 }
 .filter-row {
   display: flex;
@@ -44,12 +54,13 @@
 
 /* 卡片样式 */
 .order-card {
-  background: #ffffff;
-  border: 1rpx solid #e6ecf5;
-  border-radius: 18rpx;
-  padding: 16rpx 18rpx;
-  margin: 12rpx 0;
-  box-shadow: 0 6rpx 16rpx rgba(16, 24, 40, 0.04);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2rpx solid rgba(16, 185, 129, 0.2);
+  border-radius: 24rpx;
+  padding: 20rpx 24rpx;
+  margin: 16rpx 0;
+  box-shadow: 0 12rpx 32rpx rgba(16, 185, 129, 0.15), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20rpx);
 }
 .order-header {
   display: flex;
@@ -63,21 +74,25 @@
 }
 .cargo {
   font-size: 1rem;
-  font-weight: 700;
-  color: #1f2937;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .status-badge {
-  padding: 4rpx 10rpx;
+  padding: 6rpx 14rpx;
   border-radius: 999rpx;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
 }
-.status-unpaid { color: #c2410c; background: #fff1e6; }
-.status-wait { color: #2563eb; background: #e7f0ff; }
-.status-loading { color: #b45309; background: #fff4e5; }
-.status-transit { color: #0891b2; background: #e6fbff; }
-.status-done { color: #16a34a; background: #e9f7ec; }
-.status-cancel { color: #6b7280; background: #f3f4f6; }
+.status-unpaid { color: #c2410c; background: linear-gradient(135deg, #fff1e6 0%, #fef3c7 100%); }
+.status-wait { color: #2563eb; background: linear-gradient(135deg, #e7f0ff 0%, #dbeafe 100%); }
+.status-loading { color: #b45309; background: linear-gradient(135deg, #fff4e5 0%, #fef3c7 100%); }
+.status-transit { color: #0891b2; background: linear-gradient(135deg, #e6fbff 0%, #cffafe 100%); }
+.status-done { color: #059669; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); }
+.status-cancel { color: #6b7280; background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); }
 
 .order-header .right {
   display: flex;
@@ -90,9 +105,12 @@
   gap: 6rpx;
 }
 .price {
-  font-size: 1.375rem;
-  font-weight: 800;
-  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .price-unit {
   font-size: 0.875rem;
@@ -110,26 +128,18 @@
 .time-item { display: flex; align-items: center; gap: 8rpx; }
 .time-label { font-size: 0.75rem; color: #6b7280; }
 .time-value { font-size: 0.875rem; color: #374151; font-weight: 600; }
-.order-card {
-  background: #ffffff;
-  border: 1rpx solid #ebeef5;
-  border-radius: 20rpx;
-  padding: 20rpx;
-  margin: 16rpx 0;
-  box-shadow: 0 6rpx 16rpx rgba(16, 24, 40, 0.04);
-}
 
 /* 顶部订单号 */
 .order-meta {
   display: flex;
   align-items: center;
   gap: 8rpx;
-  color: #667085;
+  color: #059669;
   font-size: 0.75rem;
 }
-.order-meta .meta-label { color: #667085; }
-.order-meta .meta-value { color: #111827; font-weight: 600; }
-.order-meta .copy-btn { color: #2563eb; }
+.order-meta .meta-label { color: #047857; }
+.order-meta .meta-value { color: #10b981; font-weight: 700; }
+.order-meta .copy-btn { color: #3b82f6; font-weight: 600; }
 
 /* 主体站点 + 状态 */
 .order-main {
@@ -143,43 +153,72 @@
 .station-title {
   font-size: 1rem;
   font-weight: 800;
-  color: #1f2937;
+  background: linear-gradient(135deg, #047857 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .station-sub {
   margin-top: 6rpx;
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: #059669;
 }
 .status-center {
   display: flex; flex-direction: column; align-items: center; gap: 8rpx;
 }
-.status-arrow { color: #f97316; font-size: 1rem; }
+.status-arrow {
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.125rem;
+  font-weight: 800;
+}
 .status-chip {
-  padding: 4rpx 12rpx;
+  padding: 6rpx 16rpx;
   border-radius: 999rpx;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
+  box-shadow: 0 6rpx 16rpx rgba(0, 0, 0, 0.12);
 }
-.status-unpaid { color: #c2410c; background: #fff1e6; }
-.status-wait { color: #2563eb; background: #e7f0ff; }
-.status-loading { color: #b45309; background: #fff4e5; }
-.status-transit { color: #0891b2; background: #e6fbff; }
-.status-done { color: #16a34a; background: #e9f7ec; }
+.status-unpaid { color: #c2410c; background: linear-gradient(135deg, #fff1e6 0%, #fef3c7 100%); }
+.status-wait { color: #2563eb; background: linear-gradient(135deg, #e7f0ff 0%, #dbeafe 100%); }
+.status-loading { color: #b45309; background: linear-gradient(135deg, #fff4e5 0%, #fef3c7 100%); }
+.status-transit { color: #0891b2; background: linear-gradient(135deg, #e6fbff 0%, #cffafe 100%); }
+.status-done { color: #059669; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); }
 
 /* 摘要信息灰底块 */
 .summary {
   margin-top: 12rpx;
-  background: #f7f9fc;
-  border-radius: 16rpx;
-  padding: 12rpx 16rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.8) 0%, rgba(239, 246, 255, 0.8) 100%);
+  border-radius: 20rpx;
+  padding: 16rpx 20rpx;
+  border: 2rpx solid rgba(16, 185, 129, 0.15);
+  box-shadow: 0 6rpx 16rpx rgba(16, 185, 129, 0.08);
 }
 .summary-item { display: flex; align-items: center; justify-content: space-between; padding: 8rpx 0; }
-.summary .label { color: #6b7280; font-size: 0.75rem; }
-.summary .value { color: #374151; font-size: 0.875rem; font-weight: 600; }
-.price-strong { color: #dc2626; font-weight: 800; font-size: 1rem; }
+.summary .label { color: #047857; font-size: 0.75rem; font-weight: 600; }
+.summary .value { color: #10b981; font-size: 0.875rem; font-weight: 700; }
+.price-strong {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.125rem;
+}
 
 /* 底部操作 */
 .order-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 16rpx; }
 .actions-right { display: flex; gap: 12rpx; }
-.action-btn { min-width: 160rpx; }
-.pay-btn { font-weight: 700; }
+.action-btn {
+  min-width: 160rpx;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%) !important;
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.3) !important;
+  border: 2rpx solid rgba(255, 255, 255, 0.5) !important;
+}
+.pay-btn {
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  box-shadow: 0 12rpx 28rpx rgba(16, 185, 129, 0.4), inset 0 2rpx 6rpx rgba(255, 255, 255, 0.3) !important;
+}

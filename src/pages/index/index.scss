@@ -15,17 +15,17 @@
   z-index: 999; /* 置于地图上层 */
 }
 
-/* 半透明容器包裹六个按钮 */
+/* 半透明容器包裹六个按钮 - 渐变蓝绿色玻璃质感 */
 .left-sidebar .sidebar-group {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20rpx);
-  border: 2rpx solid rgba(0, 0, 0, 0.08);
-  border-radius: 16rpx;
-  box-shadow: 0 10rpx 26rpx rgba(0, 0, 0, 0.18);
-  padding-top: 8rpx;
-  padding-bottom: 8rpx;
-  padding-left: 5rpx;
-  padding-right: 5rpx;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+  backdrop-filter: blur(24rpx);
+  border: 2rpx solid rgba(16, 185, 129, 0.25);
+  border-radius: 20rpx;
+  box-shadow: 0 16rpx 40rpx rgba(16, 185, 129, 0.25), inset 0 0 60rpx rgba(255, 255, 255, 0.1);
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
 }
 
 .left-sidebar .sidebar-item {
@@ -69,18 +69,21 @@
 
 .left-sidebar .item-text {
   font-size: 0.8rem;
-  font-weight: 600;
-  color: #0f5132; /* 深绿色文字，稳重 */
+  font-weight: 700;
+  color: #047857;
   letter-spacing: 1rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
 }
 
-/* 选中态：点击的按钮背景加深为深绿色 */
+/* 选中态：点击的按钮背景加深为蓝绿渐变 */
 .left-sidebar .sidebar-item.active {
-  background: linear-gradient(180deg, #0f7b62 0%, #0c6a54 100%);
-  border-color: rgba(12, 106, 84, 0.9);
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  border: 2rpx solid rgba(59, 130, 246, 0.5);
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.4), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.2);
 }
 .left-sidebar .sidebar-item.active .item-text {
   color: #ffffff;
+  text-shadow: 0 2rpx 6rpx rgba(0, 0, 0, 0.3);
 }
 
 /* 兼容微信小程序的按钮默认 ::after 边框，彻底移除 */
@@ -124,18 +127,19 @@
   pointer-events: none;
 }
 .center-actions .center-btn {
-  padding: 16rpx 28rpx;
-  border-radius: 36rpx;
-  background: linear-gradient(180deg, #2ecc71 0%, #1abc9c 100%);
+  padding: 18rpx 32rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
   color: #fff;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  box-shadow: 0 12rpx 32rpx rgba(26, 188, 156, 0.35);
-  border: 2rpx solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12rpx 40rpx rgba(16, 185, 129, 0.5), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.25);
+  border: 2rpx solid rgba(255, 255, 255, 0.7);
+  letter-spacing: 1rpx;
 }
 .center-actions .center-btn.alt {
-  background: linear-gradient(180deg, #f6a623 0%, #f39c12 100%);
-  box-shadow: 0 12rpx 32rpx rgba(243, 156, 18, 0.35);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 12rpx 40rpx rgba(59, 130, 246, 0.5), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.25);
 }
 .center-actions .center-btn.disabled {
   background: #d9d9d9;
@@ -150,20 +154,20 @@
   top: 72rpx;
   right: 24rpx;
   z-index: 1002;
-  min-width: 220rpx;
+  min-width: 240rpx;
   max-width: 60vw;
   display: flex;
   flex-direction: column;
   gap: 12rpx;
-  padding: 16rpx 20rpx;
-  border-radius: 16rpx;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(14rpx);
-  box-shadow: 0 10rpx 26rpx rgba(0, 0, 0, 0.18);
-  border: 2rpx solid rgba(0, 0, 0, 0.08);
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.95) 0%, rgba(239, 246, 255, 0.95) 100%);
+  backdrop-filter: blur(20rpx);
+  box-shadow: 0 16rpx 40rpx rgba(16, 185, 129, 0.25), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.5);
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
   opacity: 0;
   transform: translateY(-6rpx);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .route-info.visible {
   opacity: 1;
@@ -179,29 +183,29 @@
   justify-content: space-between;
 }
 .route-info .route-label {
-  font-size: 0.8125rem;
-  color: #2f6f57;
-  font-weight: 600;
+  font-size: 0.875rem;
+  color: #047857;
+  font-weight: 700;
+  letter-spacing: 0.5rpx;
 }
 .route-info .route-value {
-  font-size: 0.9rem;
-  color: #0f5132;
-  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
 }
 
 .bottom-selector .selector-card {
   display: flex;
-  flex-direction: column; /* 一个卡片内包含起点与终点两行 */
+  flex-direction: column;
   padding: 0rpx 40rpx;
-  border-radius: 16rpx;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 150, 136, 0.12) 0%,
-    rgba(0, 150, 136, 0.22) 100%
-  );
-  border: 1rpx solid rgba(0, 150, 136, 0.25);
-  box-shadow: 0 10rpx 52rpx rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(20rpx);
+  border-radius: 24rpx;
+  background: linear-gradient(135deg, rgba(240, 253, 250, 0.95) 0%, rgba(239, 246, 255, 0.95) 100%);
+  border: 2rpx solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 20rpx 60rpx rgba(16, 185, 129, 0.25), inset 0 2rpx 12rpx rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(24rpx);
 }
 
 .bottom-selector .selector-row {
@@ -218,22 +222,23 @@
 }
 
 .bottom-selector .selector-icon {
-  width: 70rpx; /* 根据需求调整为100 */
-  height: 70rpx; /* 根据需求调整为100 */
+  width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
-  background: linear-gradient(180deg, #2ecc71 0%, #1abc9c 100%);
+  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem; /* 根据需求字体大小为26 */
+  font-size: 1.125rem;
   font-weight: 700;
-  box-shadow: inset 0 0 0 4rpx rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8rpx 20rpx rgba(16, 185, 129, 0.4), inset 0 0 0 4rpx rgba(255, 255, 255, 0.4);
   margin-right: 30rpx;
 }
 
 .bottom-selector .selector-icon.alt {
-  background: linear-gradient(180deg, #f6a623 0%, #f39c12 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 8rpx 20rpx rgba(59, 130, 246, 0.4), inset 0 0 0 4rpx rgba(255, 255, 255, 0.4);
 }
 
 .bottom-selector .selector-content {
@@ -243,21 +248,22 @@
 }
 
 .bottom-selector .selector-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0f5132;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #047857;
   margin-bottom: 8rpx;
+  letter-spacing: 0.5rpx;
 }
 .bottom-selector .selector-title.alt {
-  color: #f6a623;
+  color: #2563eb;
 }
 
 .bottom-selector .selector-subtitle {
   font-size: 0.8rem;
-  color: #2f6f57;
+  color: #059669;
 }
 .bottom-selector .selector-subtitle.alt {
-  color: #f6a623;
+  color: #3b82f6;
 }
 
 .bottom-selector .selector-action {
@@ -286,16 +292,19 @@
 
 /* 发货按钮在 ship-action 中的增强样式（更显眼） */
 .bottom-selector .ship-action .selector-action {
-  padding: 20rpx 56rpx; /* 增大触控面积 */
-  border-radius: 48rpx; /* 更圆润 */
-  font-size: 1rem; /* 字体更大，更醒目 */
-  letter-spacing: 2rpx; /* 轻微字间距提升辨识度 */
-  background: linear-gradient(180deg, #ffb347 0%, #f6a623 50%, #f39c12 100%); /* 更亮的渐变 */
-  box-shadow: 0 16rpx 40rpx rgba(243, 156, 18, 0.45), inset 0 -2rpx 0 rgba(255, 255, 255, 0.35);
-  border: 2rpx solid rgba(255, 255, 255, 0.6);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  padding: 24rpx 64rpx;
+  border-radius: 52rpx;
+  font-size: 1.125rem;
+  letter-spacing: 3rpx;
+  font-weight: 800;
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  box-shadow: 0 20rpx 50rpx rgba(16, 185, 129, 0.5), inset 0 2rpx 8rpx rgba(255, 255, 255, 0.4);
+  border: 3rpx solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+  text-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.2);
 }
 .bottom-selector .ship-action .selector-action:active {
-  transform: translateY(2rpx);
-  box-shadow: 0 12rpx 28rpx rgba(243, 156, 18, 0.35), inset 0 -2rpx 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(3rpx);
+  box-shadow: 0 12rpx 32rpx rgba(16, 185, 129, 0.4), inset 0 -2rpx 6rpx rgba(0, 0, 0, 0.1);
 }
